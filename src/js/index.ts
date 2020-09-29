@@ -5,17 +5,43 @@ new Vue({
     el: "#app",
     data: {
         name: "",
-        greeting: ""
+        outPut: "",
+        operation: ""
     },
     methods: {
         sayHello() {
             console.log("Say Hello " + this.name)
             if (this.name == "") {
-                this.greeting = "Hello NoName"
+                this.outPut = "Hello NoName"
             }
             else {
-                this.greeting = "Hello " + this.name
+                this.outPut = "Hello " + this.name
             }
+        },
+
+        stringManipulation() {
+            let name: string = this.name
+            let outPut: string = this.outPut
+            let operation: string = this.operation
+
+            switch (operation) {
+                case "toUpperCase": outPut = name.toUpperCase(); break;
+                case "toLowerCase": outPut = name.toLowerCase(); break;
+
+
+            }
+
+            this.outPut = outPut;
         }
+
+
+
+
+
+
+
+
+
+
     }
 })

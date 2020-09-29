@@ -16,11 +16,16 @@
 </head>
 
 <body>
-  <h1>Hello</h1>
+  <h1 style="color: red;">String manipulation</h1>
   <div id="app">
     <input v-model="name" placeholder="Name">
-    <button v-on:click="sayHello()" class="btn btn-primary">Say hello</button>
-    <div>{{ greeting }}</div>
+    <select  id="upperCase" v-model="operation" name="UpperCase">
+      <option value="toUpperCase">UpperCase</option>
+      <option value="">MediumCase</option>
+      <option value="toLowerCase">LowerCase</option>
+    </select>
+    <button v-on:click="stringManipulation" class="btn btn-primary">Do it!</button>
+    <div>{{ outPut }}</div>
   </div>
 
   <script src="bundle.js"></script>
